@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,8 @@
 <body>
   <h1>Hello!</h1>
 </body>
-</html>
+</html> -->
+<!-- ____________________ -->
 <!-- 2 Hello world__ -->
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +31,7 @@
 </html>
 
 ______3. Обработка событий___________ -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -42,7 +43,31 @@ ______3. Обработка событий___________ -->
 <body>
   <script>
     let socket = io();
+    socket.on('message', function(data){
+    document.write(data)  
+    });
     </script>
-  
+  <h1>Hello three times </h1>
+</body>
+</html> -->
+<!-- ____4_Добавление пользовательских событий_________________ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Socket.io</title>
+  <script src="socket.io/socket.io.js"></script>
+</head>
+<body>
+  <script>
+    let socket = io();
+    socket.on('myEvent', function (data){
+      console.log(data);
+      document.write(data.description)
+    });
+    </script>
+    <h1> Hello world 4 !!! </h1>
 </body>
 </html>
