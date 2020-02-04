@@ -51,7 +51,7 @@ ______3. Обработка событий___________ -->
 </body>
 </html> -->
 <!-- ____4_Добавление пользовательских событий_________________ -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -70,4 +70,45 @@ ______3. Обработка событий___________ -->
     </script>
     <h1> Hello world 4 !!! </h1>
 </body>
+</html> -->
+<!-- ___5. Получение событий от клиента_______ -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Socket.io</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <script>
+    let socket = io();
+    socket.emit('clientEvent', 'This event from client');
+    </script>
+    <h1> Hello world 5!</h1>
+</body>
 </html>
+
+__6.Широковещание - посыл сообщений всем подключенным лиентам _____ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Socket.io</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <script>
+    let socket = io();
+    socket.on('broadcast', function (data){
+      document.body.innerHTML = '';
+      document.write(data.descriptoin);
+    });
+    </script>
+  <h1> Hello world 6 !</h1>
+</body>
+</html>
+
