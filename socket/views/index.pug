@@ -1,4 +1,88 @@
-extends layout
+//- Было
+//- extends layout
 
-block content
-    h1 This is demo CRUD on Node.js +Express + Pug
+//- block content
+//-     h1 This is demo CRUD on Node.js +Express + Pug
+//- -------------------
+doctype html
+//
+  author: W3layouts
+  author URL: http://w3layouts.com
+  License: Creative Commons Attribution 3.0 Unported
+  License URL: http://creativecommons.org/licenses/by/3.0/
+html(lang='ru')
+  head
+    title
+      | Logistic Transport Category Flat Bootstrap Responsive Web Template | Home :: w3layouts
+    // for-mobile-apps
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='keywords', content='Logistic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, \
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
+    script.
+      addEventListener("load", function () {
+      setTimeout(hideURLbar, 0);
+      }, false);
+      function hideURLbar() {
+      window.scrollTo(0, 1);
+      }
+    // css files
+    link(href='css/bootstrap.css', rel='stylesheet', type='text/css')
+    // bootstrap css
+    link(href='css/style.css', rel='stylesheet', type='text/css')
+    // custom css
+    link(href='css/font-awesome.min.css', rel='stylesheet')
+    // fontawesome css
+    // //css files
+    // google fonts
+    link(href='//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext', rel='stylesheet')
+    // //google fonts
+  body
+    // //header
+    header
+      .container
+        // nav
+        nav.pt-2
+          #logo
+            h1
+              a(href='index.html')
+                span.fa.fa-ship
+                |  Logistic
+          label.toggle(for='drop') Menu
+          input#drop(type='checkbox')
+          ul.menu.mt-md-2.ml-auto
+            li.mr-lg-4.mr-2.active
+              a(href='index.html') Home
+            li.mr-lg-4.mr-2
+              a(href='about.html') About Us
+            li.mr-lg-3.mr-2.p-0
+              // First Tier Drop Down
+              label.toggle(for='drop-2')
+                | Dropdown 
+                span.fa.fa-angle-down(aria-hidden='true')
+              input#drop-2(type='checkbox')
+              ul.inner-dropdown
+                li
+                  a(href='gallery.html') Our Gallery
+                li
+                  a(href='error.html') 404 Error Page
+                li
+                  a(href='#') Add Link
+            li.mr-lg-4.mr-2
+              a(href='contact.html') Contact
+        // //nav
+        // //header
+        // banner
+        section#home.banner.position-relative
+          .container
+        .clearfix
+        // //banner
+        // stats
+        section.stats.py-5
+          .container.py-lg-5.py-md-3
+            .row.stat-grids
+              .copyright
+                p
+                  | © 2019 Logistic. All Rights Reserved | Design by 
+                  a(href='http://w3layouts.com/') W3layouts
+          //footer
